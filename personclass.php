@@ -1,21 +1,24 @@
 <?php
-    class Person{
-        private $name;
-        private $nationalID;
 
-        public function __construct($personName, $ID){
-            $this ->name = strtolower($personName);
-            $this ->nationalID = $ID;
-        }
+class Person{
+    
+    private $name;
+    private $nationID;
 
-        public function getName(){
-            return $this ->name;
-        }
-        public function SetName($newname){
-            $this ->name = $newname;
-        }
-        public function GetNationalID(){
-            return $this ->nationalID;
-        }
+    public function __construct($personName,$ID)
+    {
+        $this->name=strtolower($personName);
+        $this->nationID=$ID;
     }
+
+    public function GetName(){
+        return $this->name;
+    }
+    public function SetName($newName){
+        $this->name=strtoupper($newName);
+    }
+    public function GetNationID(){
+        return $this->nationID;
+    }
+}
 ?>

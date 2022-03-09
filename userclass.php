@@ -1,25 +1,29 @@
-<?php // IDEA:
+<?php
 require_once("helpers.php");
-class User{
+
+class User
+{
     private $username;
     private $userEmail;
     private $userID;
     private $status;
 
-    public function _construct( $newUser, $email )
+    public function __construct($newUser, $email)
     {
-        $this ->username = $newUser;
-        $this->  userEmail = $email;
-        $this->status =1;
+        $this->username = $newUser;
+        $this->userEmail = $email;
+        $this->status = 1;
         $this->userID = GetNextUserID();
     }
+
     public function __destruct()
     {
-        $this ->username = NULL;
-        $this-> userEmail = NULL;
+        $this->username = NULL;
+        $this->userEmail = NULL;
         $this->status = NULL;
         $this->userID = NULL;
     }
+
     public function GetUserName()
     {
         return $this->username;
@@ -30,7 +34,6 @@ class User{
     }
     public function GetUserID()
     {
-        
         return $this->userID;
     }
     public function GetStatus()
@@ -39,13 +42,11 @@ class User{
     }
     public function SetUserStatus($input)
     {
-        if($input >1 || $input <0)
-        {
+        if ($input > 1 || $input < 0) {
             return false;
         }
         $this->status = $input;
         return true;
     }
 }
-
 ?>
