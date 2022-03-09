@@ -1,5 +1,5 @@
 <?php
-    require_once("persionclass.php");
+    require_once("personclass.php");
     class Employee extends Person{
         private $employeeID;
         private $department;
